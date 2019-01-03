@@ -71,7 +71,7 @@ check out this blog [Generate Sounds using Javascript!](http://marcgg.com/blog/2
 
 ![Image of Yaktocat](https://musicmotivated.com/wp-content/uploads/2014/06/piano-guitar-bass-frequency-chart-88-keys-pitches.jpg)
 
-
+> note : there is a mistake in above image. A/B# should be A
 
 ### FEATURES
 #### Basic
