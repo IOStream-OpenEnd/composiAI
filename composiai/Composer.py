@@ -11,6 +11,7 @@ class Composer:
     main_octave = 4  # default value 4
     raw_notes = ""
     note_frequency_dict = {}
+    note_octave_list = []
 
     def input_notes_sequence(self, raw_notes):
         # inputs raw notes as string type
@@ -25,14 +26,14 @@ class Composer:
 
         formatted_notes = self.note_obj.format_note(self.raw_notes)  # converts raw notes to formatted notes
 
-        note_octave_list = self.octave_obj.note_to_octave_list(formatted_notes, self.main_octave)
+        self.note_octave_list = self.octave_obj.note_to_octave_list(formatted_notes, self.main_octave)
         # converts notes to the corresponding main octave given by the user
 
-        self.note_frequency_dict = self.frequency_obj.get_note_frequency_dict(note_octave_list, self.octave_obj)
+        self.note_frequency_dict = self.frequency_obj.get_note_frequency_dict(self.note_octave_list, self.octave_obj)
         # gets the dictionary {"note" : frequency } of notes with frequency
 
     def play(self):
 
         # for windows
-        for note in self.note_frequency_dict:
+        for note in self.note_octave_list:
             winsound.Beep(self.note_frequency_dict[note], 1000)  # produces beep sound of evey note for 1 second
