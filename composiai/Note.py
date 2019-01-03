@@ -16,4 +16,6 @@ class Note:
 
         formatted_notes = []
 
+        print(raw_notes.split(','))
+
         return formatted_notes

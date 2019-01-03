@@ -7,4 +7,5 @@ class Frequency:
         pass
 
     def get_note_frequency_dict(self, note_octave_list, octave_obj):
-        pass
+        note_frequency_dict = {}
+        return note_frequency_dict
