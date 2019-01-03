@@ -5,17 +5,17 @@ composes music based on AI
 
 #### 1. What is piano?
    
-   Piano is a music instrument that produces music by sequence of notes.
+   Piano is a musical instrument that produces music by sequence of notes.
    
-   A standard piano have 9 octaves and 88 keys
+   A standard piano has 9 octaves and 88 keys.
    
 #### 2. What is note?
 
-   a note is the pitch and duration of a sound, and also its representation in musical notation.
+   A note is the pitch and duration of a sound, and also it is commonly represented in musical notation.
    
    example => {C,C#,D,D#,E ,F,F#,G,G#,A,A#,B}
 
-#### 3. What is octave?
+#### 3. What is an octave, a scale and a chord?
 
    A octave is set of notes of particular frequencies.
    
@@ -25,9 +25,35 @@ composes music based on AI
    
    Example => 4th octave => {C4,C#4,D4,D#4,E4 ,F4,F#4,G4,G#4,A4,A#4,B4}
    
+   So, the notes present in an octave are => {C, C#, D, D#, E, F ,F#, G ,G#, A, A#, B}
+   
+   A full step movement is a jump between three notes skipping the note in the middle, 
+   example a full step movement of C will end at D.
+   
+   A half step movement is a jump between two notes,
+   example a half step movement of C will be C#.
+   
+   By using the formula => ```(2 full steps + 1/2 step + 3 full steps + 1/2 step)```
+   on the above octave, 
+   we get => {C, D E, F, G ,A, B, C}
+   This is known as a scale, and since the octave befins from C, therefore this is the Cmajor Scale.
+   
+   This can be denoted in the following ways-
+   ```
+   C     D    E     F     G    A     B     C
+   1     2    3     4     5    6     7     8
+   SA    RE   GA    MA    PA   DHA   NI    SA
+   DO    RE   MI    FA    SOL  LA    TI    DO
+   ```
+   From this the 1st 3rd and 5th note form a major chord.(A chord is a collection of notes in a specific order.)
+   Major- 1 3 5
+   Cmajor- C E G  
+   
+   For more information check (https://musicmotivated.com/wp-content/uploads/2014/06/piano-guitar-bass-frequency-chart88keyspitches.jpg)
+   
    Exceptiions => 0th octave has two keys and 8th octave has one key in standard piano
    
-#### 4. what is the format of sequence of notes? I
+#### 4. what is the format of sequence of notes?
    
    sequence of notes is given by example(Harry Potter Theme Music) => 
    ```
@@ -71,8 +97,6 @@ check out this blog [Generate Sounds using Javascript!](http://marcgg.com/blog/2
 
 ![Image of Yaktocat](https://musicmotivated.com/wp-content/uploads/2014/06/piano-guitar-bass-frequency-chart-88-keys-pitches.jpg)
 
-> note : there is a mistake in above image. A/B# should be A
-
 ### FEATURES
 #### Basic
 1. play music based on notes
@@ -83,8 +107,8 @@ check out this blog [Generate Sounds using Javascript!](http://marcgg.com/blog/2
 
 ### Teams
 
-1. For Python 3 (currently working)
-2. for Javascript (future plans)
+1. For Python 3
+2. for Javascript
 
 ### Implementation PLan
 
