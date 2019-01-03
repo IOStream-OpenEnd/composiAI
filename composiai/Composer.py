@@ -13,7 +13,7 @@ class Composer:
     note_frequency_dict = {}
 
     def input_notes_sequence(self, raw_notes):
-        # inputs raw notes
+        # inputs raw notes as string type
         self.raw_notes = raw_notes
 
     def set_octave(self, main_octave):
