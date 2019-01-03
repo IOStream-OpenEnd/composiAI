@@ -103,7 +103,8 @@ check out this blog [Generate Sounds using Javascript!](http://marcgg.com/blog/2
 2. developer usuable library
 
 #### Advanced
-1. music generation base don AI
+3. notes generated music to mp3 file
+4. music generation base don AI
 
 ### Teams
 
