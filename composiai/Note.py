@@ -14,8 +14,22 @@ class Note:
         # to formatted_notes = ['-B','E','G','F#','E','B',A','F#',' ',' ','E','G','F#','D#','E','-B']
         # NOTE : here g is converted to 'G' and Eb is converted to 'D#' similarly others.
 
-        formatted_notes = []
+        formatted_notes_list = []
 
-        print(raw_notes.split(','))
+        for note in raw_notes.split(','):
+            if note == 'Db':
+                note = 'C#'
+            elif note == 'Eb':
+                note = 'D#'
+            elif note == 'Gb':
+                note = 'F#'
+            elif note == 'Ab':
+                note = 'G#'
+            elif note == 'Bb':
+                note = 'A#'
+            else:
+                pass
+            formatted_notes_list.append(note)
+        print(formatted_notes_list)
 
-        return formatted_notes
+        return formatted_notes_list
