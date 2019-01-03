@@ -83,8 +83,8 @@ check out this blog [Generate Sounds using Javascript!](http://marcgg.com/blog/2
 
 ### Teams
 
-1. For Python 3
-2. for Javascript
+1. For Python 3 (currently working)
+2. for Javascript (future plans)
 
 ### Implementation PLan
 
