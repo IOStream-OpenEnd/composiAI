@@ -2,7 +2,10 @@
 import pyaudio
 import numpy as np
 import wave
+from pydub import AudioSegment
+from pydub.playback import play as p
 
+path_to_wav = '.\\wav\\'
 
 class Key:
 
@@ -38,7 +41,7 @@ class Key:
 
         CHUNK = 1024
 
-        wf = wave.open('.\\wav\\' + note + '.wav', 'rb')
+        wf = wave.open(path_to_wav + note + '.wav', 'rb')
 
         # instantiate PyAudio (1)
         p = pyaudio.PyAudio()
@@ -49,13 +52,17 @@ class Key:
                         rate=wf.getframerate(),
                         output=True)
 
+
+
         # read data
         data = wf.readframes(CHUNK)
+        print(data)
 
         # play stream (3)
         while len(data) > 0:
             stream.write(data)
             data = wf.readframes(CHUNK)
+
 
         # stop stream (4)
         stream.stop_stream()
@@ -64,4 +71,53 @@ class Key:
         # close PyAudio (5)
         p.terminate()
 
+    def play3(self, note_octave_list):
+        print('note octave list inside play3 => ',note_octave_list)
+        sound = AudioSegment.empty()
 
+        for i in range(len(note_octave_list)):
+
+            note = note_octave_list[i]
+            print(note_octave_list[i])
+            print(i)
+            nth_sound = AudioSegment.from_file(path_to_wav + note + '.wav')
+            #print(nth_sound.duration_seconds)
+            if i == 0:
+                sound = sound.append(nth_sound,0)
+            else:
+                sound = sound.append(nth_sound, crossfade=100)
+
+        p(sound)
+
+    # def get_track_duration_ms(self,note_octave_list):
+    #     total_ducration = 0
+    #     for i in range(len(note_octave_list)):
+    #         note = note_octave_list[i]
+    #         nth_sound = AudioSegment.from_file(path_to_wav + note + '.wav')
+    #         total_ducration = total_ducration + (nth_sound.duration_seconds * 1000)
+    #     return total_ducration
+    #
+    #
+    # def play4(self ,note_octave_list):
+    #     sound = AudioSegment.silent(duration= self.get_track_duration_ms(note_octave_list))
+    #     pos = 0
+    #     total_length = 0
+    #     for i in range(len(note_octave_list)):
+    #
+    #         note = note_octave_list[i]
+    #         print(note_octave_list[i])
+    #         print(i)
+    #         nth_sound = AudioSegment.from_file(path_to_wav + note + '.wav')
+    #         sound = sound.overlay(nth_sound, pos)
+    #         pos = total_length + 450
+    #         print("pos=> ",pos)
+    #         total_length = total_length + (nth_sound.duration_seconds) * 1000
+    #         print("total_length=> ", total_length)
+    #
+    #         FH = sound.export("output.wav", format="wav")
+    #
+    #     p(sound)
+    #
+    #
+    #
+    #
