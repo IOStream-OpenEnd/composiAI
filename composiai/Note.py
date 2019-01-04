@@ -17,16 +17,32 @@ class Note:
         formatted_notes_list = []
 
         for note in raw_notes.split(','):
-            if note == 'Db':
-                note = 'C#'
-            elif note == 'Eb':
-                note = 'D#'
-            elif note == 'Gb':
-                note = 'F#'
-            elif note == 'Ab':
-                note = 'G#'
-            elif note == 'Bb':
-                note = 'A#'
+            if len(note) == 2:
+                if note == 'Db':
+                    note = 'C#'
+                elif note == 'Eb':
+                    note = 'D#'
+                elif note == 'Gb':
+                    note = 'F#'
+                elif note == 'Ab':
+                    note = 'G#'
+                elif note == 'Bb':
+                    note = 'A#'
+                else:
+                    pass
+            elif len(note) == 3:
+                print(note)
+                print(note[1:3])
+                if note[1:3] == 'Db':
+                    note = str(note[0]) + 'C#'
+                elif note[1:3] == 'Eb':
+                    note = str(note[0]) + 'D#'
+                elif note[1:3] == 'Gb':
+                    note = str(note[0]) + 'F#'
+                elif note[1:3] == 'Ab':
+                    note = str(note[0]) + 'G#'
+                elif note[1:3] == 'Bb':
+                    note = str(note[0]) + 'A#'
             else:
                 pass
             formatted_notes_list.append(note)
