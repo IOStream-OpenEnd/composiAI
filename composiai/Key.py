@@ -5,7 +5,7 @@ import wave
 from pydub import AudioSegment
 from pydub.playback import play as p
 
-path_to_wav = '.\\wav\\'
+path_to_wav = '.\\note\\'
 
 class Key:
 
@@ -38,6 +38,9 @@ class Key:
         p.terminate()
 
     def  play2(self, note):
+
+        if note == ' ':
+            return
 
         CHUNK = 1024
 
@@ -80,6 +83,7 @@ class Key:
             note = note_octave_list[i]
             print(note_octave_list[i])
             print(i)
+
             nth_sound = AudioSegment.from_file(path_to_wav + note + '.wav')
             #print(nth_sound.duration_seconds)
             if i == 0:
