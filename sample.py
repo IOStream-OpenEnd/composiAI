@@ -10,7 +10,8 @@ myComposer = cp.Composer(harryPotterNotes, 5)
 #myComposer.play()
 
 
-#myComposer.export_as_mp3("got","output/","C:\\Users\\Shubham\\Downloads\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe")
+
+myComposer.export_as_mp3("got","output/","C:\\Users\\Shubham\\Downloads\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe")
 
 
 
