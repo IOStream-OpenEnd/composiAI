@@ -1,3 +1,4 @@
+import os
 
 from pydub import AudioSegment
 from pydub.playback import play as p
@@ -40,11 +41,11 @@ class Track:
                 self.sound = self.sound[:pos + nth_sound.duration_seconds * 1000]
 
     def export_to_wav(self, output_file_name, path):
-        self.sound.export(path + output_file_name + '.wav', format="wav")
+        self.sound.export(os.path.join(path, output_file_name) + '.wav', format="wav")
 
     def export_to_mp3(self, output_file_name, path, path_to_ffmpeg):
         pydub.AudioSegment.converter = path_to_ffmpeg
-        self.sound.export(path + output_file_name + '.mp3', format="mp3")
+        self.sound.export(os.path.join(path, output_file_name) + '.mp3', format="mp3")
 
     def get_track_duration_ms(self, note_octave_list):
         total_duration = 0
