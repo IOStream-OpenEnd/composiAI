@@ -77,7 +77,7 @@ output_file_path = os.path.dirname(os.path.realpath(__file__))
 
 output_file_name = "got"
 
-##### To generate mp3 file
+##### To generate wav file
 
 myComposer.export_as_wav(output_file_name,output_file_path)
 
@@ -97,7 +97,7 @@ output_file_name = "got"
 
 ##### To generate mp3 file
 
-#please change this path to your path of ffmpeg
+#please change this path to your path of ffmpeg.exe
 path_to_ffmpeg = "path_to_ffmpeg\\ffmpeg\\bin\\ffmpeg.exe"
 
 myComposer.export_as_mp3(output_file_name,output_file_path,path_to_ffmpeg)
