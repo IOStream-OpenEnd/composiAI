@@ -26,3 +26,78 @@ myComposer.play()
 
 ```
 
+#### API Documentation
+
+This document is a work in progress.
+#### Composer()
+```python
+
+import composiai.Composer as cp
+
+game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, ,C, ,D#,F,G, ,C, ,D#,F,D,-A#,D#,F,D,-A#, ,F, ,-A#, ,D#,D,F, ,-A#, ,D#,D,C,-G#,-G#,-A#,C,-F,-G#,-A#,C,-F,-G#,-A#,C"
+
+myComposer = cp.Composer(game_of_thrones, 5)
+
+myComposer.play()
+
+```
+#### Composer().set_octave(main_octave)
+```python
+
+import composiai.Composer as cp
+game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, ,C, ,D#,F,G, ,C, ,D#,F,D,-A#,D#,F,D,-A#, ,F, ,-A#, ,D#,D,F, ,-A#, ,D#,D,C,-G#,-G#,-A#,C,-F,-G#,-A#,C,-F,-G#,-A#,C"
+
+myComposer = cp.Composer(game_of_thrones, 5)
+myComposer.set_octave(4)
+myComposer.play()
+
+```
+#### Composer().play()
+```python
+
+import composiai.Composer as cp
+game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, ,C, ,D#,F,G, ,C, ,D#,F,D,-A#,D#,F,D,-A#, ,F, ,-A#, ,D#,D,F, ,-A#, ,D#,D,C,-G#,-G#,-A#,C,-F,-G#,-A#,C,-F,-G#,-A#,C"
+
+myComposer = cp.Composer(game_of_thrones, 5)
+myComposer.set_octave(4)
+myComposer.play()
+
+```
+#### Composer().export_as_wav(output_file_name, path)
+```python
+
+import composiai.Composer as cp
+import os
+
+game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, ,C, ,D#,F,G, ,C, ,D#,F,D,-A#,D#,F,D,-A#, ,F, ,-A#, ,D#,D,F, ,-A#, ,D#,D,C,-G#,-G#,-A#,C,-F,-G#,-A#,C,-F,-G#,-A#,C"
+
+myComposer = cp.Composer(game_of_thrones, 5)
+
+myComposer.set_octave(4)
+
+output_file_path = os.path.dirname(os.path.realpath(__file__))
+
+output_file_name = "got.wav"
+
+myComposer.export_as_wav(output_file_name, output_file_path)
+
+```
+```python
+
+import composiai.Composer as cp
+import os
+
+game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, ,C, ,D#,F,G, ,C, ,D#,F,D,-A#,D#,F,D,-A#, ,F, ,-A#, ,D#,D,F, ,-A#, ,D#,D,C,-G#,-G#,-A#,C,-F,-G#,-A#,C,-F,-G#,-A#,C"
+
+myComposer = cp.Composer(game_of_thrones, 5)
+
+myComposer.set_octave(4)
+
+output_file_path = os.path.dirname(os.path.realpath(__file__))
+
+output_file_name = "got.mp3"
+
+myComposer.export_as_mp3(output_file_name, output_file_path)
+
+```
+
