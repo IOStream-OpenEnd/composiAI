@@ -11,6 +11,7 @@ Step 2 : copy the following file and folder to your project directory
 - composiai
 - note
 - requirements.txt
+
 Step 3 : run this command in your project directory
 ```
 pip install -r requirements.txt
