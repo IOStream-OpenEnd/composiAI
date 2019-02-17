@@ -1,7 +1,20 @@
 # composiAI
 composes music(.wav or .mp3) based on piano notes.
 > NOTE : Currently there is nothing related to AI
+### How to setup ```composiAI``` to your project?
 
+Step 1 : clone this project
+```
+git clone https://github.com/IOStream-OpenEnd/composiAI.git
+```
+Step 2 : copy the following file and folder to your project directory
+- composiai
+- note
+- requirements.txt
+Step 3 : run this command in your project directory
+```
+pip install -r requirements.txt
+```
 ### USAGE
 
 ```python
