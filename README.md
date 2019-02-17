@@ -73,13 +73,13 @@ game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, 
 
 myComposer = cp.Composer(game_of_thrones, 5)
 
-myComposer.set_octave(4)
-
 output_file_path = os.path.dirname(os.path.realpath(__file__))
 
-output_file_name = "got.wav"
+output_file_name = "got"
 
-myComposer.export_as_wav(output_file_name, output_file_path)
+##### To generate mp3 file
+
+myComposer.export_as_wav(output_file_name,output_file_path)
 
 ```
 ```python
@@ -91,13 +91,16 @@ game_of_thrones = "G,C,D#,F,G,C,D#,F,G,C,D#,F,D,-G,-A#,C,D,-G,-A#,C,D,-G, , ,G, 
 
 myComposer = cp.Composer(game_of_thrones, 5)
 
-myComposer.set_octave(4)
-
 output_file_path = os.path.dirname(os.path.realpath(__file__))
 
-output_file_name = "got.mp3"
+output_file_name = "got"
 
-myComposer.export_as_mp3(output_file_name, output_file_path)
+##### To generate mp3 file
+
+#please change this path to your path of ffmpeg
+path_to_ffmpeg = "path_to_ffmpeg\\ffmpeg\\bin\\ffmpeg.exe"
+
+myComposer.export_as_mp3(output_file_name,output_file_path,path_to_ffmpeg)
 
 ```
 
